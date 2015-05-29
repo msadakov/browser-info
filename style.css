@@ -1,0 +1,158 @@
+@-ms-viewport{
+  width:device-width;
+}
+
+@-o-viewport{
+  width:device-width;
+}
+
+@viewport{
+  width:device-width;
+}
+
+html{
+  background:#fafafa;
+}
+body{
+  margin: 7% auto;
+  max-width: 800px;
+  width: 90%;
+  color:#333;
+  font-family:sans-serif;
+}
+h1,h2,h3,ul,li,p{
+  margin:0;
+  padding:0;
+  font:inherit;
+  font-size:100%;
+  vertical-align:baseline;
+}
+ul{
+  list-style:none;
+}
+h1{
+  font-size:1.8em;
+  font-weight:800;
+  color:#1976D2;
+}
+h2{
+  font-size:1.7em;
+  font-weight:800;
+}
+h3{
+  background:#EEE;
+  font-weight:800;
+  padding: 1em;
+  font-size: 1em;
+}
+button,button:hover{
+  padding: 1em 0px 1.1em;
+  background:#1976D2;
+  color:#FFF;
+  border:1px solid transparent;
+  border-radius:2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  -moz-user-select: none;
+  cursor:pointer;
+  width:100%;
+  margin: 30px 0px;
+  font-size: 100%;
+  font-weight:bold;
+  outline:none;
+}
+button:active{
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.15) inset;
+}
+
+button::-moz-focus-inner
+{
+  border: none;
+}
+
+ul b {
+  float: right;
+}
+
+ul li{
+  border-bottom: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  padding: 1em;
+  width: 100%;
+  margin:0;
+}
+ul li:last-child{
+  border: 0 none;
+}
+
+#info{
+  background: #FFF;
+  border:1px solid rgba(0, 0, 0, 0.14);
+  border-radius:3px;
+}
+
+ul p{
+  color:#FFF;
+  font:14px;
+  padding:1em;
+  background:#727272;
+  display:block;
+  opacity:0;
+  position: absolute;
+  border-radius:4px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  margin-top: -15px;
+  visibility:hidden;
+  margin-right:6%;
+}
+
+ul li:hover+p{
+  visibility:visible;
+  opacity: 0.9;
+  margin-top:0px;
+}
+
+@media screen and (max-width:400px){
+  body{
+    font-size:78%;
+  }
+}
+
+@media screen and (min-width: 800px){
+	body{
+		font-size:112.5%
+	}
+
+}
+
+//For check orientation
+#orient:before{
+  content:"неизивестно"
+}
+@media (orientation: portrait){
+  #orient:before{
+    content:"портретная"
+  }
+}
+
+@media (orientation: landscape){
+  #orient:before{
+    content:"альбомная"
+  }
+}
+.license{
+  margin:30px 0;
+  text-align: center;
+}
+.license img[src="github.png"]{
+  float:left;
+}
+.license img[src="agplv3.png"]{
+  float:right;
+  margin-top: 7.5px;
+}
+.license a{
+  color:#333;
+}
